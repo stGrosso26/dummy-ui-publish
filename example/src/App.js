@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import { ExampleComponent } from 'dummy-ui-publish'
+import { ColoredHeadingOne, ColoredHeadingTwo }from 'dummy-ui-publish'
 import 'dummy-ui-publish/dist/index.css'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <ColoredHeadingOne
+          text="Colored red heading works!"
+          color={'red'}
+        />
+        <ColoredHeadingTwo
+          text="Colored red heading works!"
+          color={'red'}
+        />
+      </div>
+    )
+  }
 }
-
-export default App
